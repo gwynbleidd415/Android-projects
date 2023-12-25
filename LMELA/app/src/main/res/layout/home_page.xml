@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".homePage">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details Form"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@id/tableLayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10sp"
+        app:layout_constraintBottom_toTopOf="@id/submitI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/nameT"
+                android:layout_width="100sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Name"
+                android:textSize="24sp" />
+
+            <!--            android:layout_weight="1"-->
+            <EditText
+                android:id="@+id/nameI"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10sp"
+                android:inputType="text"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/regNoT"
+                android:layout_width="100sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Reg No."
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/regNoI"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10sp"
+                android:inputType="number"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/deptT"
+                android:layout_width="100sp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Dept"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/deptI"
+                android:layout_width="100sp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10sp"
+                android:spinnerMode="dropdown"/>
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/submitI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUBMIT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
